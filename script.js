@@ -14,7 +14,8 @@ const userProfile = {
 
 /* Build the system message with any known user details */
 function buildSystemPrompt() {
-  let prompt = "You are a helpful L'Oreal product advisor.";
+  let prompt =
+    "You are a helpful L'Oreal product advisor. Only answer questions related to L'Oreal products, beauty routines, skincare, haircare, makeup, ingredients, and beauty recommendations. If a question is unrelated, politely refuse and briefly guide the user back to beauty topics you can help with.";
 
   if (userProfile.name) {
     prompt += ` The user's name is ${userProfile.name}. Use their name naturally when helpful.`;
